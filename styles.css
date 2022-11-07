@@ -1,0 +1,235 @@
+html{
+    font-family: Roboto;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p{
+    margin: 0;
+}
+
+body>*{
+    padding: 0 50px 0 50px;
+    margin-bottom: 50px;
+}
+
+header{
+    display: flex;
+    align-items: center;  
+    z-index: 999;
+    position: fixed;
+    width: calc(100% - 100px);
+}
+
+h1{
+    font-size: 32px;
+    color: black;
+    margin: 0 0 20px 0;
+}
+
+h2{
+    font-size: 24px;
+    margin: 20px 20px 0 20px;
+    display: inline-block;
+}
+
+.mdi{
+    color: black;
+}
+
+header{
+    background-color: #045b71;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 28px;
+    margin-left: 20px;
+    vertical-align: middle;
+    line-height: 51px; 
+}
+
+.nav{
+    margin-right: 20px;
+    display: flex;
+    gap: 50px;
+}
+
+ul{
+    display: table;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav li{
+    display: inline-block;
+}
+
+.about-me{
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.my-photo{
+    background-color: gray;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0px 0px 5px rgb(168, 168, 168);
+    flex-shrink: 0;
+    background-image: url(/images/my_photos/me.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 1;
+}
+
+.about-card{
+    padding: 20px;
+    height: 250px;
+    background-color: white ;
+    box-shadow: 0px 0px 5px rgb(168, 168, 168);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.links{
+    display: flex;
+    gap: 15px;
+    align-self: flex-end;
+}
+
+.mdi{
+    font-size: 32px;
+}
+
+.background-object{
+    width: 2500px;
+    height: 600px;
+    background-color: #0891B2;
+    transform: rotate(-5deg) translate(-100px, -200px);
+    position: absolute;
+    z-index: -1;
+}
+
+.project-card{
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 5px rgb(168, 168, 168);
+    display: grid;  
+    transition: 0.6s; 
+}
+
+.project-image{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    row-gap: 45px;
+    align-items: center;
+    justify-items: center;
+}
+
+.projects{
+    display: flex;
+    flex-flow: column;
+    scroll-margin-top: 60px;
+}
+
+.project-about{
+    margin: 20px;
+}
+
+.card-icons{
+    float: right;
+    padding: 15px 15px 0 0;
+    display: flex;
+    gap: 10px;
+}
+
+.contact-me{
+    background-color: #0891B2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center; 
+    height: 350px;
+    margin-bottom: 0;
+}
+
+.contact-info{
+    font-size: 24px;
+}
+
+.contact-me h1{
+    color: white;
+}
+
+li span{
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact-info ul li{
+    margin-bottom: 15px;
+}
+
+.contact-info ul li span{
+    color: white;
+}
+
+li .telegram{
+    transform:  rotate(-40deg) translate(10px, 0);
+    margin-right: 10px;
+}
+
+.contact-info ul{
+    margin-top: 20px;
+}
+
+.telegram{
+    display: inline-block;
+    transform: rotate(-40deg) translate(6px, 0);
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover{
+    color:#0891B2 !important;
+}
+
+.mdi:hover{
+    color: #0891B2;
+}
+
+.contact-info ul .mdi:hover{
+    color: #045b71;
+}
+
+.contact-info ul a:hover{
+    color: #045b71 !important;
+}
+
+a:visited{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.project-card:hover{
+    transform: scale(105%);
+    transition-duration: 0.6s;
+}
