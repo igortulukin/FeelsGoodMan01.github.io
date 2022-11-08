@@ -1,6 +1,7 @@
 html{
     font-family: Roboto;
     scroll-behavior:smooth;
+    overflow-x: hidden;
 }
 
 body{
@@ -81,7 +82,7 @@ ul{
 .my-photo{
     background-color: gray;
     width: 350px;
-    height: 350px;
+    aspect-ratio: 1/1;
     box-shadow: 0px 0px 5px rgb(168, 168, 168);
     flex-shrink: 0;
     background-image: url(/images/my_photos/me.jpg);
@@ -92,7 +93,6 @@ ul{
 
 .about-card{
     padding: 20px;
-    height: 250px;
     background-color: white ;
     box-shadow: 0px 0px 5px rgb(168, 168, 168);
     display: flex;
@@ -121,15 +121,14 @@ ul{
 
 .project-card{
     width: 400px;
-    height: 400px;
     box-shadow: 0px 0px 5px rgb(168, 168, 168);
     display: grid;  
     transition: 0.6s; 
 }
 
 .project-image{
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    aspect-ratio: 2 / 1;
     object-fit: cover;
 }
 
@@ -164,7 +163,6 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items:center; 
-    height: 350px;
     margin-bottom: 0;
 }
 
@@ -232,4 +230,68 @@ a:visited{
 .project-card:hover{
     transform: scale(105%);
     transition-duration: 0.6s;
+}
+
+@media (max-width: 750px) {
+    header{
+        width: 100%;
+        position: static;
+        margin-bottom: 0;
+    }
+
+    body>*{
+        padding: 0 10px 0 10px;
+    }
+
+    .about-me{
+        position: relative;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .grid-wrapper{
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .about-me{
+        flex-flow: column;
+        padding-top: 30px;
+    }
+
+    .my-photo{
+        width: min(300px, 70vw)
+    }
+
+    .project-card{
+        width: 90%;
+    }
+
+    .card-icons{
+        padding: 0 0 0 15px;
+        float: none;
+    }
+
+    .contact-me .my-photo{
+        display: none;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .contact-me{
+        padding-top: 20px;
+    }
+
+    .contact-info{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .contact-info p{
+        text-align: center;
+    }
 }
